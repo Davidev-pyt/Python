@@ -6,16 +6,8 @@ for count in range(0 , 5):
     maior =  max(listanum)
     menor = min(listanum)
   
-print('-=' * 30)
-print(f'Voçê digitou os valores {listanum}')
-print(f'O maior valor digitado foi {maior} nas posições',end=' ')
+pos_maior = [ i for i , v in enumerate(listanum) if v == maior]
+pos_menor = [i for i, v in enumerate(listanum) if v == menor]
 
-for i, v in enumerate(listanum):
-     if v == maior:
-      print(f'{i}...', end=' ')
-print()
-print(f'O menor valor digitado foi {menor} nas posições', end=' ')
-for i , v in enumerate(listanum):
-     if v == menor:
-          print(f'{i}...', end=' ')
-print()
+print(f'O maior valor foi {maior} nas posições{pos_maior}')
+print(f'O menor valor foi {menor} nas posições {pos_menor}')
